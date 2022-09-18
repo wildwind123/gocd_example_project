@@ -1,0 +1,1 @@
+mkdir $GO_FROM_REVISION && ls
