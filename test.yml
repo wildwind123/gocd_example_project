@@ -15,7 +15,7 @@
     - 
       local_action: 
         clone: true
-        dest: /home/petr/git/test1/
+        dest: /home/petr/git/test1/d1
         module: git
         repo: "https://github.com/wildwind123/gocd_example_project"
       name: "check out a git repository"
