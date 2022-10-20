@@ -15,6 +15,7 @@
 #     become_user: petr
     git: 
       repo: https://github.com/wildwind123/gocd_example_project
+      become: yes
       dest: "/home/petr/git/test1/"
       clone: yes
       update: yes
