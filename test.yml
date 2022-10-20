@@ -28,4 +28,4 @@
         repo: "https://github.com/wildwind123/gocd_example_project"
         clone: true
         dest: ./d
-       
+        separate_git_dir: /home/petr
