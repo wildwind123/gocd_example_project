@@ -15,20 +15,12 @@
         path: /home/petr/test.txt
         state: touch
       name: "create empty file"
-#     - name: check whoami
-#       shell: whoami
+    - name: check whoami
+      shell: whoami
 #     - debug: var=out.stdout_lines
-# #     - 
-# #       local_action: 
-# #         clone: true
-# #         dest: /home/petr/git/test1/d1
-# #         module: git
-# #         repo: "https://github.com/wildwind123/gocd_example_project"
-# #       name: "check out a git repository"
-#     - name: a play that runs entirely on the ansible host
-#       hosts: current
-#       git:
-#         repo: "https://github.com/wildwind123/gocd_example_project"
-#         clone: true
-#         dest: aaaaaaaaaaaaaaaaaa
-#         separate_git_dir: /home/petr/git/123
+    - name: a play that runs entirely on the ansible host
+      git:
+         repo: "https://github.com/wildwind123/gocd_example_project"
+         clone: true
+         dest: aaaaaaaaaaaaaaaaaa
+         separate_git_dir: /home/petr/git/123
