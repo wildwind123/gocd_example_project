@@ -25,7 +25,7 @@
     - name: a play that runs entirely on the ansible host
       delegate_to: 127.0.0.1
       environment:
-        TMPDIR: "/home/petr/tmp"
+        TMPDIR: "/home/petr/git"
       git:
         repo: "https://github.com/wildwind123/gocd_example_project"
         clone: true
