@@ -6,3 +6,8 @@
   tasks:
   - name: Hello World!
     shell: echo "Hi! ansible-semaphore is working."
+  - name: create empty file
+    file:
+      path: "/home/petr/test.txt"
+      state: touch
+    become: yes
