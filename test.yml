@@ -12,9 +12,9 @@
         path: /home/petr/test.txt
         state: touch
       name: "create empty file"
+    - name: check whoami
+      shell: whoami
     - 
-      become: yes
-      become_user: petr
       local_action: 
         clone: true
         dest: /home/petr/git/test1/d1
