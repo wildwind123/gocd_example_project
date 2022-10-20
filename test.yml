@@ -11,18 +11,24 @@
       path: "/home/petr/test.txt"
       state: touch
     become: yes
-  - name: "clone thing from git"
-#     become_user: petr
-    become: yes
-    git: 
-      repo: https://github.com/wildwind123/gocd_example_project
+  - name: check out a git repository
+      local_action: 
+        module: git
+        repo: https://github.com/wildwind123/gocd_example_project
+        dest: "/home/petr/git/test1/"
+        clone: yes
+#   - name: "clone thing from git"
+# #     become_user: petr
+#     become: yes
+#     git: 
+#       repo: https://github.com/wildwind123/gocd_example_project
       
-      dest: "/home/petr/git/test1/"
-      clone: yes
-      update: yes
-#       accept_hostkey: yes
-    #  recursive: yes
-     # force: yes
-#       become: yes
-#       version: main
-    delegate_to: localhost
+#       dest: "/home/petr/git/test1/"
+#       clone: yes
+#       update: yes
+# #       accept_hostkey: yes
+#     #  recursive: yes
+#      # force: yes
+# #       become: yes
+# #       version: main
+#     delegate_to: localhost
