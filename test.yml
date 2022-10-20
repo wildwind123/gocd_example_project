@@ -15,11 +15,17 @@
     - name: check whoami
       shell: whoami
     - debug: var=out.stdout_lines
-    - 
-      local_action: 
-        clone: true
-        dest: /home/petr/git/test1/d1
-        module: git
+#     - 
+#       local_action: 
+#         clone: true
+#         dest: /home/petr/git/test1/d1
+#         module: git
+#         repo: "https://github.com/wildwind123/gocd_example_project"
+#       name: "check out a git repository"
+    - name: a play that runs entirely on the ansible host
+      hosts: 127.0.0.1
+      connection: local
+      tasks:
+      - name: check out a git repository
         repo: "https://github.com/wildwind123/gocd_example_project"
-      name: "check out a git repository"
-    
+        clone: true
