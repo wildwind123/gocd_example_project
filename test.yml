@@ -8,6 +8,7 @@
       shell: "echo \"Hi! ansible-semaphore is working.\""
     - 
       become: true
+      delegate_to: 127.0.0.1
       file: 
         path: /home/petr/test.txt
         state: touch
