@@ -1,34 +1,21 @@
-
----
-- name: Hello World!
+--- 
+- 
   hosts: website
- 
-  tasks:
-  - name: Hello World!
-    shell: echo "Hi! ansible-semaphore is working."
-  - name: create empty file
-    file:
-      path: "/home/petr/test.txt"
-      state: touch
-    become: yes
-  - name: check out a git repository
+  name: "Hello World!"
+  tasks: 
+    - 
+      name: "Hello World!"
+      shell: "echo \"Hi! ansible-semaphore is working.\""
+    - 
+      become: true
+      file: 
+        path: /home/petr/test.txt
+        state: touch
+      name: "create empty file"
+    - 
       local_action: 
+        clone: true
+        dest: /home/petr/git/test1/
         module: git
-        repo: https://github.com/wildwind123/gocd_example_project
-        dest: "/home/petr/git/test1/"
-        clone: yes
-#   - name: "clone thing from git"
-# #     become_user: petr
-#     become: yes
-#     git: 
-#       repo: https://github.com/wildwind123/gocd_example_project
-      
-#       dest: "/home/petr/git/test1/"
-#       clone: yes
-#       update: yes
-# #       accept_hostkey: yes
-#     #  recursive: yes
-#      # force: yes
-# #       become: yes
-# #       version: main
-#     delegate_to: localhost
+        repo: "https://github.com/wildwind123/gocd_example_project"
+      name: "check out a git repository"
