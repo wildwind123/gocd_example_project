@@ -12,14 +12,15 @@
       state: touch
     become: yes
   - name: "clone thing from git"
-    become_user: petr
+#     become_user: petr
     git: 
       repo: https://github.com/wildwind123/gocd_example_project
-      dest: "/home/petr/git/test1"
+      dest: "/home/petr/git/test1/"
       clone: yes
+      update: yes
 #       accept_hostkey: yes
     #  recursive: yes
      # force: yes
 #       become: yes
-      version: main
+#       version: main
     delegate_to: localhost
