@@ -14,7 +14,7 @@
   - name: "clone thing from git"
     git: 
       repo: https://github.com/wildwind123/gocd_example_project
-      dest: "/home/petr/git"
+      dest: "/home/petr/git/test1"
       clone: yes
 #       accept_hostkey: yes
       recursive: yes
